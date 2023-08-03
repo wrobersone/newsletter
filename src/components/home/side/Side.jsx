@@ -3,8 +3,17 @@ import './side.css'
 import Heading from "../../common/heading/Heading"
 import SocialMedia from "./social/SocialMedia"
 import Tpost from "./tpost/Tpost"
+import { gallery } from "../../../data"
+import Slider from "react-slick"
 
 const Side = () => {
+    const settings = {
+        dots: false,
+        infinite: false,
+        slidesToShow: 1,
+        speed: 500,
+        slidesToScroll: 1,
+      }
     const category = ['business', 'fashion', 'fun', 'health', 'sports', 'technology', 'travel', 'world'];
   return (
     <>
@@ -32,6 +41,19 @@ const Side = () => {
                 <span>{val}</span>
             </div>
         })}
+      </section>
+
+      <section className="gallery">
+        <Heading title="Gallery" />
+        <Slider  {...settings}>
+        {gallery.map((val) => {
+            return (
+                <div className="img">
+                    <img src={val.cover} alt="" />
+                </div>
+            )
+        })}
+        </Slider>
       </section>
     </>
   )

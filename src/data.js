@@ -466,7 +466,7 @@ export const gallery = [
 ];
 export const discover = [
   {
-    title: "games",
+    title: "science",
     cover: "../images/discover/d1.jpg",
   },
   {
@@ -486,7 +486,7 @@ export const discover = [
     cover: "../images/discover/d5.jpg",
   },
   {
-    title: "nitendo",
+    title: "games",
     cover: "../images/discover/d6.jpg",
   },
 ];
